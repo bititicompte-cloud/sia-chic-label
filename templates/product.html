@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ product.name }}</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8fb;
+        }
+
+        .container{
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            margin-bottom: 100px;
+        }
+
+        .product-image img{
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+        }
+        .product-image{
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .product-info{
+            max-width: 500px;
+        }
+
+        .product-info h1{
+            font-size: 50px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .price{
+            font-size: 32px;
+            color: #ff69b4;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description{
+            color: #666;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn{
+            background: #ff69b4;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .btn-back{
+            background: #333;
+        }
+        .gallery{
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .gallery img{
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #ffd6e7;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover{
+            transform: scale(1.08);
+        }
+       
+        .size-box{
+            background: #ffe6f1;
+            color: #ff69b4;
+            padding: 12px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        .right-side{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+       
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="product-image">
+            <img src="/static/{{ product.image }}" id="main-image">
+            <div class="right-side">
+
+                {% if product.gallery %}
+                <div class="gallery">
+                    {% for image in product.gallery %}
+                    <img src="/static/{{ image }}" onclick="changeImage(this)">
+                {% endfor %}
+                </div>
+            {% endif %}
+            
+            <div class="product-info">
+
+                <h1>{{ product.name }}</h1>
+
+                <div class="price">
+                    {{ product.price }}
+                </div>
+               <div class="size-box">
+                   Taille Disponible : M Standard
+                </div>
+
+                <div class="description">
+                    {{ product.description }}
+                </div>
+
+                <a href="https://wa.me/212600000000" class="btn">
+                    Commander sur WhatsApp
+                </a>
+
+                <a href="/" class="btn btn-back">
+                    Retour
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+<script>
+
+function changeImage(element){
+    document.getElementById("main-image").src = element.src;
+}
+
+</script>
+
+   
+
+
+
+
+
+
+
+</body>
+</html>
