@@ -219,67 +219,67 @@
         transform: scale(1.1);
     }
     .footer{
-    background: #ffffff;
+        background: #ffffff;
 
-    text-align: center;
+        text-align: center;
 
-    padding: 60px 20px;
+        padding: 60px 20px;
 
-    margin-top: 80px;
+        margin-top: 80px;
 
-    border-top: 1px solid #ffd6e7;
-}
+        border-top: 1px solid #ffd6e7;
+    }
 
-.footer h2{
-    color: #ff69b4;
-    margin-bottom: 10px;
-}
+    .footer h2{
+        color: #ff69b4;
+        margin-bottom: 10px;
+    }
 
-.footer p{
-    color: #666;
-}
+    .footer p{
+        color: #666;
+    }
 
-.footer-links{
-    margin: 25px 0;
-}
+    .footer-links{
+        margin: 25px 0;
+    }
 
-.footer-links a{
-    text-decoration: none;
-    color: #444;
-    margin: 0 15px;
-    font-weight: bold;
-}
+    .footer-links a{
+        text-decoration: none;
+        color: #444;
+        margin: 0 15px;
+        font-weight: bold;
+    }
 
-.footer-links a:hover{
-    color: #ff69b4;
-}
+    .footer-links a:hover{
+        color: #ff69b4;
+    }
 
-.copyright{
-    margin-top: 30px;
-    color: #999;
-    font-size: 14px;
-}
-.whatsapp-btn{
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 65px;
-    height: 65px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
+    .copyright{
+        margin-top: 30px;
+        color: #999;
+        font-size: 14px;
+    }
+    .whatsapp-btn{
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        width: 65px;
+        height: 65px;
+        background: #25D366;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 30px;
+        color: white;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
 
-.whatsapp-btn:hover{
-    transform: scale(1.1);
-}
+    .whatsapp-btn:hover{
+        transform: scale(1.1);
+    }
 
 
 
@@ -293,7 +293,14 @@
 
     .navbar{
         flex-direction: column;
-        padding: 15px;
+        padding: 10px;
+        gap: 15px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .navbar h2{
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .navbar div{
@@ -301,26 +308,47 @@
     }
 
     .hero{
-        padding-left: 20px;
-        min-height: 500px;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        min-height: 450px;
+        line-height: 1.1;
+    }
+    .navbar a{
+        font-size: 16px;
+        margin: 0;
+    }
+    .nav-right{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero-content{
         transform: none;
-        max-width: 90%;
+        max-width: 100%;
+
     }
 
     .hero h1{
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .hero p{
-        font-size: 16px;
+        font-size: 22px;
     }
 
     .hero-button{
-        flex-direction: column;
-        width: fit-content;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-button button{
+        width: 100%;
+        max-width: 250px;
+        font-size: 18px;
+    }
+    .products h2{
+        font-size: 34px;
     }
 
     .products-grid{
@@ -329,10 +357,16 @@
 
     .products-card{
         width: 100%;
-        max-width: 320px;
+        max-width: 350px;
         margin: auto;
         transition: 0.3s;
         cursor: pointer;
+    }
+    .products-card h3{
+        font-size: 24px;
+    }
+    .products-card p{
+        font-size: 22px;
     }
     .products-card:hover{
         transform: translateY(-10px);
@@ -341,11 +375,7 @@
     .products-card img{
         transition: 0.3s;
     }
-    .products-card:hover img{
-        transform: scale(1.05);
-    }
-
-
+   
     .features{
         padding: 40px 20px;
     }
@@ -359,21 +389,9 @@
     .nav-right{
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 30px;
     }
-    .search-box{
-        padding: 10px 15px;
-        border: 2px solid #ffd6e7;
-        border-radius: 25px;
-        outline: none;
-        width: 180px;
-        transition: 0.3s;
-    }
-
-    .search-box:focus{
-        border-color: #ff69b4;
-        width: 220px;
-    }
+ 
     .reviews{
     padding: 80px 50px;
     background: #fff8fb;
@@ -477,6 +495,9 @@
 
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sia Chic Label</title>
 </head>
 <body>
@@ -488,7 +509,7 @@
             <a href="/#products">Product</a>
             <a href="/#contact">Contact</a>
             <a href="/#about">About</a>
-            <input type="text" placeholder="🔍 Rechercher..." class="search-box">
+            
 
         </div>
         
@@ -501,7 +522,7 @@
             أناقة وموضة نسائية<br>
             </p>
             <div class="hero-button">
-                <a href="https://wa.me/212600000000">
+                <a href="https://wa.me/212786565321">
                 <button class="btn1">🛍 Shop Now</button>
                 </a>
                 <a href="#products">
@@ -543,7 +564,7 @@
 
             {% for product in products %}
 
-            <div class="products-card">
+            <div class="products-card" data-name="{{product.name}}">
                 <span class="badge">NEW</span>
                 <img src="/static/{{product.image}}">
                 <h3>{{product.name}}</h3>
@@ -617,13 +638,13 @@
 
     <div class="social-links">
 
-        <a href="LIEN_WHATSAPP">📱 WhatsApp</a>
+        <a href="https://wa.me/212786565321" target="_blank">📱 WhatsApp</a>
 
-        <a href="LIEN_INSTAGRAM">📸 Instagram</a>
+        <a href="https://instagram.com/sia_chic_label" target="_blank">📸 Instagram</a>
 
-        <a href="LIEN_TIKTOK">🎵 TikTok</a>
+        <a href="https://www.tiktok.com/@sia.chic" target="_blank">🎵 TikTok</a>
 
-        <a href="LIEN_FACEBOOK">📘 Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61589343780913">📘 Facebook</a>
 
     </div>
 
@@ -643,7 +664,7 @@
     </div>
 
     <p>📍 Maroc</p>
-    <p>📞 WhatsApp : +212 XXX XX XX XX</p>
+    <p>📞 WhatsApp : +212 786 565 321</p>
 
     <div class="copyright">
         © 2025 Sia Chic Label - Tous droits réservés
@@ -651,9 +672,11 @@
 
 </footer>
 
-<a href="https://wa.me/212600000000" class="whatsapp-btn">
-    💬
+<a href="https://wa.me/212786565321" class="whatsapp-btn">
+    <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+
 
 </body>
 </html>
