@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ product.name }}</title>
 
     <style>
@@ -104,6 +105,68 @@
             flex-direction: column;
             gap: 20px;
         }
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+        padding: 15px;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    .product-image{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product-image img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery img{
+        width: 90px;
+        height: 90px;
+    }
+
+    .product-info{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .product-info h1{
+        font-size: 34px;
+    }
+
+    .price{
+        font-size: 28px;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+
+    .btn{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0;
+        padding: 18px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .size-box{
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+
+}
        
 
     </style>
@@ -141,7 +204,7 @@
                     {{ product.description }}
                 </div>
 
-                <a href="https://wa.me/212600000000" class="btn">
+                <a href="https://wa.me/212786565321" class="btn">
                     Commander sur WhatsApp
                 </a>
 
